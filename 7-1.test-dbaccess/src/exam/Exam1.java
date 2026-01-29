@@ -19,6 +19,8 @@ public class Exam1 {
 		Connection con = null; // 使用する変数の宣言
 		PreparedStatement pstmt = null;
 		String sql = null;
+        String sql2=null;
+        String sql3=null;
 
 		try {
 			// (1)データベースに接続
@@ -26,7 +28,7 @@ public class Exam1 {
 
 			// (2)SQL文を作成
 			sql = "INSERT INTO test_members (name, age, dep_id) VALUES('山田太郎', 62, 1);";
-
+            sql2="INSERT INTO "
 			// (3)SQL実行準備
 			pstmt = con.prepareStatement(sql);
 
