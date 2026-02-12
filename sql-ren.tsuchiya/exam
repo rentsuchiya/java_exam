@@ -1,0 +1,21 @@
+問題１
+INSERT INTO items (id,category_id,name,price)
+VALUES(13,1,'鰯',150),(14,2,'羊',650);
+
+問題２
+UPDATE items SET price=price*0.9;
+
+問題３
+DELETE FROM employees WHERE end_date>='2013-03-31';
+
+問題４
+SELECT MIN(start_date) FROM employees;
+
+問題５
+SELECT r.name,p.name FROM prefectures AS p INNER JOIN  regions AS r
+ON r.code = p.region_code;
+
+問題６
+SELECT SUM(population) FROM populations;
+
+問題７
