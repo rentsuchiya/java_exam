@@ -75,15 +75,16 @@ public class MemberRepository {
 	public Member save(Member member) {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(member);
 
-		if (member == null) { // ←正しい条件に修正する
+		if (member == null) { // ←正しい条件に修正するa
 			String insertSql = "INSERT INTO test_members (id,name,age,dep_id) VALUES(id=:id,name=:name,age=:age,dep_id=:dep_id)";
 
 			// ここに実行処理を書く
 			template.query(insertSql, MEMBER_ROW_MAPPER);
 		} else {
-			String updateSql = "ここにSQL文を書く";
+			String updateSql = "UPDETE test_members SET id=:id,name=:name,age=:age,dep_id=:dep_id";
 
 			// ここに実行処理を書く
+			template.execute(updateSql, MEMBER_ROW_MAPPER);
 		}
 
 		return member;
