@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.restapi.domain.User;
+import com.example.restapi.dto.UserRequest;
 import com.example.restapi.dto.UserResponse;
 import com.example.restapi.service.UserService;
+
+import jakarta.validation.Valid;
 
 /**
  * ユーザー情報を管理するREST APIコントローラー
@@ -49,13 +52,13 @@ public class UserApiController {
 
     // POSTメソッドによるユーザー作成（POST /users）
     // 引数や戻り値は適宜修正してください
-    public void createUser(@RequestBody String name, @RequestBody String email) {
+    public void createUser(@Valid @RequestBody UserRequest user) {
 
         return;
     }
 
     // PUTメソッドによるユーザー更新（PUT /users/{id}）
-    // 引数や戻り値は適宜修正してください
+    // 引数や戻り値は適宜修正してくださいa
     public void updateUser() {
         return;
     }
